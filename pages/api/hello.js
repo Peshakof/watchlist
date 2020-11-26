@@ -4,6 +4,5 @@ export default (req, res) => {
   if(req.method === 'GET') {
     res.statusCode = 200
     res.json({ name: 'John Doe' })
-
   }
 }

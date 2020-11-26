@@ -33,7 +33,6 @@ const Index = ({res}) => {
 
   useEffect(() => {
     
-    console.log(res)
   }, [])
 
   return (
@@ -54,10 +53,10 @@ const Index = ({res}) => {
 
         {
           searchedResult.map(item => (
-          <div key={item.id}>{item.snippet.title}</div>
+          // <div key={item.id}>{item.snippet.title}</div>
+          <ReactPlayer url={`https://www.youtube.com/watch?v=${item.id.videoId}`} controls={true}/>
           ))
         }
-        <ReactPlayer url="https://www.youtube.com/watch?v=lVJLNsLNnWs" controls={true}/>
       </main>
     </div>
   )
